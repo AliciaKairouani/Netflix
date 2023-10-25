@@ -5,3 +5,4 @@ sentence-transformers==2.2.2
 streamlit==1.26.0
 supabase==1.2.0
 dotenv-python==0.0.1
+faiss-cpu==1.7.4
