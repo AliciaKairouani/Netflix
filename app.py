@@ -10,7 +10,6 @@ from supabase import create_client, Client
 import os
 
 st.set_page_config(layout="wide")
-
 st.title("Movies App")
 
 load_dotenv()
@@ -28,5 +27,3 @@ db = FAISS.load_local("model", embeddings)
 query = st.selectbox("movie title", movies)
 docs = db.similarity_search(query, k=5)
 docs
-
-
