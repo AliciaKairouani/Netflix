@@ -1,5 +1,4 @@
 import streamlit as st
-import pymysql
 import pandas as pd
 from sentence_transformers import SentenceTransformer
 from langchain.vectorstores import FAISS
@@ -13,7 +12,6 @@ from function import extract_movie_titles
 
 # generate_background_image()
 st.set_page_config(layout="wide")
-
 st.title("Movies App")
 
 background_image = 'url("https://www.themoviedb.org/t/p/original/xGexTKCJDkl12dTW4YCBDXWb1AD.jpg")'
@@ -67,5 +65,9 @@ db = FAISS.load_local("model", embeddings)
 query = st.selectbox("movie title", movies)
 docs = db.similarity_search(query, k=5)
 
+
 list_movies = extract_movie_titles(docs)
 st.write(' -- '.join(str(x) for x in list_movies))
+
+
+
