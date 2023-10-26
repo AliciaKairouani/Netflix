@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer
 from langchain.vectorstores import FAISS
 from langchain.embeddings import SentenceTransformerEmbeddings
 from langchain.document_loaders.csv_loader import CSVLoader
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 from supabase import create_client, Client
 import os
 import re
