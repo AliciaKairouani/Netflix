@@ -50,7 +50,7 @@ st.markdown(f"""
     """,
             unsafe_allow_html=True)
 
-load_dotenv()
+#load_dotenv()
 
 key = os.getenv("SUPABASE_KEY")
 url = os.getenv("SUPABASE_URL")
